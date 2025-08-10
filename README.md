@@ -34,3 +34,11 @@ This project demonstrates encrypting product data on the backend using AES-256-G
    PORT=3000
    ENCRYPTION_KEY=<your_base64_encoded_32_byte_key>
    MONGODB_URI=<your_mongodb_connection_string>
+Install dependencies: npm install
+Seed the database with initial product data:node seed.js
+
+Frontend Setup
+Navigate to the frontend directory.
+
+Install dependencies:npm run start This runs both servers simultaneously for easy development.
+
