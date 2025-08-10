@@ -1,12 +1,37 @@
-# React + Vite
+Encrypted Products API with React Frontend
+Overview
+This project demonstrates encrypting product data on the backend using AES-256-GCM and decrypting it securely on the React frontend using the Web Crypto API. It provides a secure way to transfer sensitive product data between the server and client.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Structure
+Backend: Node.js + Express API encrypting product data from MongoDB using crypto module.
 
-Currently, two official plugins are available:
+Frontend: React app fetching encrypted data and decrypting it in-browser using Web Crypto API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Encryption: AES-256-GCM with a 256-bit key, random IV, and authentication tag.
 
-## Expanding the ESLint configuration
+Setup and Running Instructions
+Prerequisites
+Node.js (v14+ recommended)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm or yarn
+
+MongoDB instance with a Products collection seeded with product data
+
+Backend Setup
+Clone the repository.
+
+Navigate to the backend directory (or root if combined).
+
+Create a .env file with these variables:
+
+PORT=3000
+ENCRYPTION_KEY=<your_base64_encoded_32_byte_key>
+MONGODB_URI=<your_mongodb_connection_string>
+
+Install Dependencies 
+
+npm install
+
+To Start Project 
+
+npm run start
